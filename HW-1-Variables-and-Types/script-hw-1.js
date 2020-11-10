@@ -7,7 +7,7 @@ console.log(Math.max(chocolateBar , chedderCheese , feltTipPenPack));
 
 //min value
 console.log(Math.min(chedderCheese , chocolateBar , feltTipPenPack));
-
+*/
 const sumOfProducts = chedderCheese + chocolateBar + feltTipPenPack;
 console.log(sumOfProducts);
 
@@ -18,4 +18,3 @@ const sumOfProductsWithoutCoins = chedderCheeseWithoutCoins + chocolateBarWithou
 console.log(sumOfProductsWithoutCoins); 
 
 console.log(Math.round(sumOfProducts/100)*100);
-*/
