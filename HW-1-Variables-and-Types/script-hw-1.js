@@ -5,7 +5,7 @@ const penPrice = 90.2345;
 const maxPrice = Math.max(chocolatePrice , chedderPrice , penPrice);
 console.log(maxPrice);
 
-const minPrice = Math.max(chocolatePrice , chedderPrice , penPrice);
+const minPrice = Math.min(chocolatePrice , chedderPrice , penPrice);
 console.log(minPrice);
 
 const sumOfProductsPrices = chedderPrice + chocolatePrice + penPrice;
