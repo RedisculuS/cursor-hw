@@ -24,7 +24,7 @@ const isEvenSum = sumOfProductsPricesNoCoins % 2 === 0;
 console.log(isEvenSum);
 
 const clientMoney = 500;
-const clientChange = clientMoney - sumOfProductsPrices;
+const clientChange = Number((clientMoney - sumOfProductsPrices).toFixed(2));
 console.log(clientChange);
 
 const averagePrice = Number((sumOfProductsPrices / 3).toFixed(2));
