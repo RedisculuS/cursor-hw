@@ -2,9 +2,11 @@ const chocolatePrice = 15.678;
 const chedderPrice = 123.965;
 const penPrice = 90.2345;
 
-console.log(Math.max(chocolatePrice , chedderPrice , penPrice));
+const maxPrice = Math.max(chocolatePrice , chedderPrice , penPrice);
+console.log(maxPrice);
 
-console.log(Math.min(chedderPrice , chocolatePrice , penPrice));
+const minPrice = Math.max(chocolatePrice , chedderPrice , penPrice);
+console.log(minPrice);
 
 const sumOfProductsPrices = chedderPrice + chocolatePrice + penPrice;
 console.log(sumOfProductsPrices);
@@ -15,10 +17,11 @@ const penPriceNoCoins = Math.floor(penPrice);
 const sumOfProductsPricesNoCoins = chedderPriceNoCoins + chocolatePriceNoCoins + penPriceNoCoins;
 console.log(sumOfProductsPricesNoCoins); 
 
-console.log(Math.round(sumOfProductsPrices / 100) * 100);
+const roundedSum = Math.round(sumOfProductsPrices / 100) * 100;
+console.log(roundedSum);
 
-const isEven = sumOfProductsPricesNoCoins % 2 === 0;
-console.log(isEven);
+const isEvenSum = sumOfProductsPricesNoCoins % 2 === 0;
+console.log(isEvenSum);
 
 const clientMoney = 500;
 const clientChange = clientMoney - sumOfProductsPrices;
@@ -35,3 +38,14 @@ console.log(clientSaleToPay);
 const productsCostPrice = sumOfProductsPrices / 2;
 const cleanIncome = Number((productsCostPrice - (sumOfProductsPrices / 100 * randomSale)).toFixed(2));
 console.log(cleanIncome); 
+
+document.write(`Максимальне число : ${maxPrice} <br>
+                Мінімальне число : ${minPrice} <br>
+                Сума вартості товарів : ${sumOfProductsPrices} <br>
+                Округлена в меншу сторону вартість товарів : ${sumOfProductsPricesNoCoins} <br>
+                Сума округлена до сотень : ${roundedSum} <br>
+                Чи парною є сума? : ${isEvenSum} <br>
+                Сума решти з ${clientMoney} грн : ${clientChange} <br>
+                Середнє значення цін з копійками : ${averagePrice} <br>
+                Сума із випадковою знижкою з копійками : ${clientSaleToPay} <br>
+                Чистий прибуток : ${cleanIncome}`);
