@@ -18,7 +18,7 @@ if (needOddNum == 0) {
     for (minNum; minNum <= maxNum; minNum++) {
         sum += minNum;
     }
-    console.log(`Сумма чисел з ${minNum} до ${maxNum} дорівнює : ${sum}`);
+    console.log(`Сумма чисел дорівнює : ${sum}`);
 } else { 
     for (minNum; minNum <= maxNum; minNum++) {
         if (minNum % 2 === 0) {
@@ -27,5 +27,5 @@ if (needOddNum == 0) {
             sum += minNum;
         }
     }
-    console.log(`Сумма чисел з ${minNum} до ${maxNum} без підрахунку пірних чисел дорівнює : ${sum}`);
+    console.log(`Сумма без підрахунку парних чисел дорівнює : ${sum}`);
 }
