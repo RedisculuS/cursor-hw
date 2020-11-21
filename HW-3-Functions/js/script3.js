@@ -97,7 +97,7 @@ function deleteLetters (letter , word) {
 //console.log(deleteLetters("a", "Mariia"));
 
 //10
-const isPalyndrom = (word) => word == word.split('').reverse().join('');
+const isPalyndrom = (word) => word === word.split('').reverse().join('');
 //console.log(isPalyndrom('кокос'));
 //console.log(isPalyndrom('мадам'));
 
