@@ -31,7 +31,10 @@ const formatName = (name) => name[0].toUpperCase() + name.slice(1).toLowerCase()
 //console.log(formatName("ВлаДюШка"));
 
 //4
-const cleanSalary = (salary) => salary *= 0.805;
+//const cleanSalary = (salary) => salary *= 0.805;
+function cleanSalary (salary , tax = 19.5) {
+    return salary - (salary * (tax / 100));
+}
 // console.log(cleanSalary(1000));
 
 //5
@@ -55,25 +58,27 @@ function countLetter (letter , word) {
 //console.log(countLetter("а","Асталавіста"));
 
 //7
-function convertCurrency (moneyConvert) {
-    moneyConvert = moneyConvert.toLowerCase();
-    if (moneyConvert.includes("uan")) {
-        moneyConvert = parseInt(moneyConvert);
-        moneyConvert *= 0.035;
-    } else if (moneyConvert.includes("$")){
-        moneyConvert = parseInt(moneyConvert);
-        moneyConvert *= 28.36;
+function convertCurrency (moneyToConvert) {
+    let dollarBuy = 0.035;
+    let dollarSell = 28.36
+    moneyToConvert = moneyToConvert.toLowerCase();
+    if (moneyToConvert.includes("uan")) {
+        moneyToConvert = parseInt(moneyToConvert);
+        moneyToConvert *= dollarBuy;
+    } else if (moneyToConvert.includes("$")){
+        moneyToConvert = parseInt(moneyToConvert);
+        moneyToConvert *= dollarSell;
     } else {
        return alert("Error, unsuitable currency");
     }
-    return moneyConvert.toFixed(2);
+    return moneyToConvert.toFixed(2);
 }
 //console.log(convertCurrency("100$"));
 
 //8
 function getRandomPassword (passwordLength = 8) {
     let password = "";
-    if (passwordLength === 0 || passwordLength < 0 ) {
+    if (passwordLength <= 0 ) {
         passwordLength = 8;
     }
     for (let i = 0; i < passwordLength; i++) {
@@ -118,7 +123,7 @@ function deleteDuplicateLetter (sentense) {
 document.writeln(`Функція №1: ${getMaxDigit(2083.45)} <br>`);
 document.writeln(`Функція №2: ${getPow(9,-3)} <br>`);
 document.writeln(`Функція №3: ${formatName("ИнноКЕНтиЙ")} <br>`);
-document.writeln(`Функція №4: ${cleanSalary(1000)} <br>`);
+document.writeln(`Функція №4: ${cleanSalary(1000, 25)} <br>`);
 document.writeln(`Функція №5: ${getRandomNumber(1, 10)} <br>`);
 document.writeln(`Функція №6: ${countLetter("а","Асталавіста")} <br>`);
 document.writeln(`Функція №7: ${convertCurrency("100$")} та ${convertCurrency("100UAN")} <br>`);
