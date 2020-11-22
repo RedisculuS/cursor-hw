@@ -16,9 +16,9 @@ console.log(pairs);
 
 //2
 function pairsAndThemes (pairResultFromPrevious, themesArr) {
-    let resultArr = [];
-    let pairResultNormal = [...pairResultFromPrevious];
-    let themesArrNormal = [...themesArr];
+    const resultArr = [];
+    const pairResultNormal = [...pairResultFromPrevious];
+    const themesArrNormal = [...themesArr];
     for (let i = 0; i < pairResultNormal.length; i++) {
         resultArr.push([pairResultNormal[i].join(" і ") , themesArrNormal[i]]);
     }
@@ -29,7 +29,7 @@ console.log(themesPair);
 
 //3
 function marksForStudents (studentsArr , marksArr) {
-    let studentsWithMarks = [];
+    const studentsWithMarks = [];
     for (let i = 0; i < studentsArr.length; i++) {
         studentsWithMarks.push([studentsArr[i], marksArr[i]]);
     }
@@ -43,8 +43,10 @@ function markForProject (pairsArr , themesArr) {
     const pairsArrNew = [...pairsArr]; 
     const themesArrNew = [...themesArr]; 
     const randomMarkForProj = [];
+    const maxNum = 5;
+    const minNum = 1;
     for (let i = 0; i < pairsArrNew.length; i++) {
-        randomMarkForProj.push([pairsArrNew[i].join(" і ") , themesArrNew[i] , Math.floor(Math.random() * (5 - 1 + 1)) + 1])
+        randomMarkForProj.push([pairsArrNew[i].join(" і ") , themesArrNew[i] , Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum])
     }
     return randomMarkForProj;
 }
