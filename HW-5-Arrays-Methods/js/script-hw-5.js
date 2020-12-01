@@ -3,7 +3,7 @@ const getRandomArray = (length , min , max) => {
     const randomArrLength = +length;
     const minNumArr = Math.round(+min);
     const maxNumArr = Math.round(+max);
-    let randomArr = [];
+    const randomArr = [];
     for (let i = 0; i < randomArrLength; i++) {
         randomArr[i] = Math.floor(Math.random() * (maxNumArr - minNumArr + 1)) + minNumArr;
     }
@@ -46,14 +46,9 @@ const getAverage = (...numbers) => {
 
 //4 
 const getMedian = (...numbers) => {
-    const medianArr = [...numbers].filter(number => { return Math.trunc(number) === number});
-    medianArr.sort((a, b) => a - b);
-    console.log(medianArr);
-    if ((medianArr.length) % 2 === 1) {
-        return (medianArr[Math.floor(medianArr.length / 2)]);
-    } else {
-        return ((medianArr[medianArr.length / 2] + medianArr[(medianArr.length / 2) - 1]) / 2);
-    }
+    const medianArr = [...numbers].filter(number => { return Math.trunc(number) === number}).sort((a, b) => a - b);
+    // console.log(medianArr);
+    return (medianArr.length) % 2 === 1 ? medianArr[Math.floor(medianArr.length / 2)] : (medianArr[medianArr.length / 2] + medianArr[(medianArr.length / 2) - 1]) / 2;
 };
 // console.log(getMedian(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
 // console.log(getMedian(1, 3, 2.5, 4));
@@ -62,7 +57,7 @@ const getMedian = (...numbers) => {
 //5
 const filterEvenNumbers = (...numbers) => {
     const notYetEvenArr = [...numbers];
-    const evenNumArr = notYetEvenArr.filter(evenNum => {return evenNum % 2 === 1});
+    const evenNumArr = notYetEvenArr.filter(evenNum => evenNum % 2 === 1);
     return evenNumArr;
 };
 // console.log(filterEvenNumbers(1, 2, 3, 4, 5, 6, 7));
@@ -70,7 +65,7 @@ const filterEvenNumbers = (...numbers) => {
 //6
 const countPositiveNumbers = (...numbers) => {
     const allNum = [...numbers];
-    const positiveNum = allNum.filter(plusNum => {return plusNum > 0});
+    const positiveNum = allNum.filter(plusNum =>  plusNum > 0);
     return positiveNum.length;
 };
 // console.log(countPositiveNumbers(1, -2, 3, -4, -5, 6));
@@ -78,7 +73,7 @@ const countPositiveNumbers = (...numbers) => {
 //7
 const getDividedByFive = (...numbers) => {
     const notYetDivNum = [...numbers];
-    const divNumArr = notYetDivNum.filter(fiveDivNum => {return fiveDivNum % 5 === 0});
+    const divNumArr = notYetDivNum.filter(fiveDivNum => fiveDivNum % 5 === 0);
     return divNumArr;
 };
 // console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2));
