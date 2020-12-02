@@ -26,7 +26,7 @@ const students = [{
   
 //1
 const getSubjects = (student) => {
-    let subjectArr = Object.keys(student.subjects);
+    let subjectArr = Object.keys(student?.subjects);
     subjectArr = subjectArr.map((subjName) => {
         return (subjName[0].toUpperCase() + subjName.slice(1).toLowerCase()).replaceAll("_"," ");
     }) 
@@ -34,33 +34,63 @@ const getSubjects = (student) => {
 };
 // console.log(getSubjects(students[0]));
 
-//2 ?
+//2 
 const getAverageMark = (student) => {
-    const averageArr = Object.values(student.subjects);
-    let averageArrEverySubj = [];
-    for (i = 0; i < averageArr.length; i++) {
-        const total = averageArr[i].reduce((total, number) => {
-            return total + number;
-        }, 0);
-        const average = (total / averageArr[i].length).toFixed(2);
-        averageArrEverySubj.push(average);
-    }
-    return averageArrEverySubj;
+    const averageArr = Object.values(student?.subjects).flat(Infinity);
+    // console.log(averageArr);
+    return parseFloat((averageArr.reduce((total, mark) => total + mark,0) / averageArr.length).toFixed(2));
 };
-console.log(getAverageMark(students[0]));
+// console.log(getAverageMark(students[2]));
 
 //3
-const getStudentInfo = () => {};
-// console.log(getStudentInfo());
+const getStudentInfo = (student) => {
+  return {
+    course: student?.course,
+    name: student?.name,
+    averageMark: getAverageMark(student)
+  }
+};
+console.log(getStudentInfo(students[1]));
 
 //4
-const getStudendsNames = () => {};
-// console.log(getStudendsNames());
+const getStudendsNames = (student) => {
+  const studNames = student.map((stud) => stud?.name,0).sort();
+  return studNames
+};
+// const getStudendsNames = (student) => student.map((stud) => stud?.name,0).sort();
+// console.log(getStudendsNames(students));
 
 //5
-const getBestStudent = () => {};
-// console.log(getBestStudent());
+const getBestStudent = (student) => {
+  let bestMark = 0;
+  const sortMark = student.reduce((bestStud, simpleStud) => {
+    const averageMarkStud = getAverageMark(simpleStud);
+    if (bestMark < averageMarkStud) {
+      bestMark = averageMarkStud;
+      return bestStud = simpleStud?.name;
+    } else if (bestMark === averageMarkStud) {
+      return bestStud += simpleStud?.name;
+    }
+  },'');
+  return sortMark;
+};
+// console.log(getBestStudent(students));
 
 //6
-const calculateWordLetters = () => {};
-// console.log(calculateWordLetters());
+const calculateWordLetters = (string) => {
+  let stringArr = string.split('');
+  let resultLetters = {};
+  stringArr.forEach(letter => {
+    resultLetters[letter] ? (resultLetters[letter]++) : (resultLetters[letter] = 1);
+  });
+  return resultLetters;
+};
+console.log(calculateWordLetters("Аккомодация"));
+
+document.writeln(`Функція 1: ${getSubjects(students[0])} <br>
+                  Функція 2: ${getAverageMark(students[2])} <br>
+                  Функція 3: ${Object.entries(getStudentInfo(students[1]))} <br>
+                  Функція 4: ${getStudendsNames(students)} <br>
+                  Функція 5: ${getStudendsNames(students)} <br>
+                  Функція 6: ${Object.entries(calculateWordLetters("Аккомодация"))} 
+                  `);
