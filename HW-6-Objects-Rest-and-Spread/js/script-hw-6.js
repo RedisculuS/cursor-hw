@@ -74,7 +74,7 @@ const getBestStudent = (student) => {
   },'');
   return sortMark;
 };
-// console.log(getBestStudent(students));
+console.log(getBestStudent(students));
 
 //6
 const calculateWordLetters = (string) => {
@@ -91,6 +91,6 @@ document.writeln(`Функція 1: ${getSubjects(students[0])} <br>
                   Функція 2: ${getAverageMark(students[2])} <br>
                   Функція 3: ${Object.entries(getStudentInfo(students[1]))} <br>
                   Функція 4: ${getStudendsNames(students)} <br>
-                  Функція 5: ${getStudendsNames(students)} <br>
+                  Функція 5: ${getBestStudent(students)} <br>
                   Функція 6: ${Object.entries(calculateWordLetters("Аккомодация"))} 
                   `);
