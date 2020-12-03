@@ -44,20 +44,21 @@ const getAverageMark = (student) => {
 
 //3
 const getStudentInfo = (student) => {
+  const {course, name} = student;
   return {
-    course: student?.course,
-    name: student?.name,
+    course,
+    name,
     averageMark: getAverageMark(student)
   }
 };
-console.log(getStudentInfo(students[1]));
+// console.log(getStudentInfo(students[1]));
 
 //4
-const getStudendsNames = (student) => {
-  const studNames = student.map((stud) => stud?.name,0).sort();
-  return studNames
-};
-// const getStudendsNames = (student) => student.map((stud) => stud?.name,0).sort();
+// const getStudendsNames = (student) => {
+//   const studNames = student.map((stud) => stud?.name,0).sort();
+//   return studNames
+// };
+const getStudendsNames = (student) => student.map((stud) => stud?.name,0).sort();
 // console.log(getStudendsNames(students));
 
 //5
@@ -74,18 +75,18 @@ const getBestStudent = (student) => {
   },'');
   return sortMark;
 };
-console.log(getBestStudent(students));
+// console.log(getBestStudent(students));
 
 //6
 const calculateWordLetters = (string) => {
-  let stringArr = string.split('');
+  const stringArr = string.split('');
   let resultLetters = {};
   stringArr.forEach(letter => {
     resultLetters[letter] ? (resultLetters[letter]++) : (resultLetters[letter] = 1);
   });
   return resultLetters;
 };
-console.log(calculateWordLetters("Аккомодация"));
+// console.log(calculateWordLetters("Аккомодация"));
 
 document.writeln(`Функція 1: ${getSubjects(students[0])} <br>
                   Функція 2: ${getAverageMark(students[2])} <br>
