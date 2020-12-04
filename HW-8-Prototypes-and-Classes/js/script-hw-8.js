@@ -47,7 +47,7 @@ class BudgetStudent extends Student {
                 if (this.getAverageMark >= 4 && this.mark){
                     console.log(`Ви отримали 1400 грн. стипендії`);
                 }
-            },3000);
+            },30000);
     }
     dismiss() {
         super.dismiss();
