@@ -26,13 +26,13 @@ const students = [{
   
 //1
 const getSubjects = (student) => {
-    let subjectArr = Object.keys(student?.subjects);
-    subjectArr = subjectArr.map((subjName) => {
+    // let subjectArr = Object.keys(student?.subjects);
+    const subjectArr = Object.keys(student?.subjects).map((subjName) => {
         return (subjName[0].toUpperCase() + subjName.slice(1).toLowerCase()).replaceAll("_"," ");
     }) 
     return subjectArr;
 };
-// console.log(getSubjects(students[0]));
+console.log(getSubjects(students[0]));
 
 //2 
 const getAverageMark = (student) => {
