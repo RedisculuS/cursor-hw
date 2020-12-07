@@ -3,25 +3,37 @@ class Student {
         this.university = university;
         this.course = course;
         this.fullName = fullName;
-        this.mark = [5, 4, 4, 5];
+        this.marks = [5, 4, 4, 5];
     }
     get getInfo() {
         return `Студент ${this.course}го курсу ${this.university}, ${this.fullName}`
     }
     get getMarks() {
-        return this.mark;
+        if (this.marks === null){
+            console.log('На жаль Ви відраховані');
+        }else {
+            return this.marks;
+        }
     }
     set setMark(markStud) {
-        return this.mark.push(markStud);
+        if (this.marks === null){
+            console.log('На жаль Ви відраховані');
+        }else {
+            return this.marks.push(markStud);
+        }
     }
     get getAverageMark() {
-        return this.mark.reduce((total, number) => total + number,0) / this.mark.length;
+        if (this.marks === null){
+            console.log('На жаль Ви відраховані');
+        }else {
+            return this.marks.reduce((total, number) => total + number,0) / this.marks.length;
+        }
     }
     dismiss() {
-        this.mark = null;
+        this.marks = null;
     }
     recover() {
-        this.mark = [];
+        this.marks = [];
     }
 }
 
@@ -33,9 +45,9 @@ const jura = new Student ('КПІ', 1,'Бондаренко Юрій Остап�
 // console.log(jura.getMarks);
 // console.log(jura.getAverageMark);
 // jura.dismiss();
-// console.log(jura.mark);
+// console.log(jura.marks);
 // jura.recover();
-// console.log(jura.mark);
+// console.log(jura.marks);
 
 class BudgetStudent extends Student {
     constructor(university, course, fullName) {
@@ -44,7 +56,7 @@ class BudgetStudent extends Student {
     }
     get getSholarship() {
             this.interval = setInterval(() => {
-                if (this.getAverageMark >= 4 && this.mark){
+                if (this.marks && this.getAverageMark >= 4){
                     console.log(`Ви отримали 1400 грн. стипендії`);
                 }
             },30000);
@@ -62,7 +74,8 @@ class BudgetStudent extends Student {
 const valia = new BudgetStudent('КНТЕУ', 3, 'Самойлова Валентина Михайлівна');
 console.log(valia.getAverageMark);
 valia.dismiss();
+valia.getMarks;
 valia.recover();
 valia.setMark = 4;
-console.log(valia.mark);
+console.log(valia.marks);
 console.log(valia.getAverageMark);
