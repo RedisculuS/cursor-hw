@@ -24,15 +24,23 @@ function getTotalTaxes() {
 const randomSalary = (min = 1500, max = 2000) => (Math.floor(Math.random() * (max - min + 1)) + min);
 
 function getMySalary() {
-    const salary = randomSalary();
-    const taxes = getMyTaxes.call(this, salary);
-    const profit = salary - taxes;
+    const salary = +randomSalary().toFixed(2);
+    const taxes = +getMyTaxes.call(this, salary).toFixed(2);
+    const profit = +(salary - taxes).toFixed(2);
     return {
-        salary : +salary.toFixed(2),
-        taxes : +taxes.toFixed(2),
-        profit : +profit.toFixed(2)
+        salary, taxes, profit
     }
 }
+// function getMySalary() {
+//     const salary = randomSalary();
+//     const taxes = getMyTaxes.call(this, salary);
+//     const profit = salary - taxes;
+//     return {
+//         salary : +salary.toFixed(2),
+//         taxes : +taxes.toFixed(2),
+//         profit : +profit.toFixed(2)
+//     }
+// }
 
 setInterval(() => console.log(getMySalary.call(ukraine)), 10000);
 
