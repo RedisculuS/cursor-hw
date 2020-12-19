@@ -1,7 +1,7 @@
 function makeSound(e) {
-    let code = e.keyCode ? e.keyCode : this.getAttribute("data-key"); 
-    let activeKey = document.querySelector('.key[data-key="' + code + '"]');
-    let activeAudio = document.querySelector('audio[data-key="' + code + '"]');
+    const code = e.keyCode ? e.keyCode : this.getAttribute("data-key"); 
+    const activeKey = document.querySelector('.key[data-key="' + code + '"]');
+    const activeAudio = document.querySelector('audio[data-key="' + code + '"]');
     if (!activeAudio) return;
     activeAudio.currentTime = 0;
     activeAudio.play();
@@ -10,13 +10,10 @@ function makeSound(e) {
     
 document.addEventListener('keydown', makeSound);
 
-let allKeys = document.querySelectorAll(".key");
+const allKeys = document.querySelectorAll(".key");
 
 allKeys.forEach(function (key) {
     key.addEventListener('click', makeSound);  
-})
-
-allKeys.forEach(function (key) { 
     key.addEventListener('transitionend', function (e) {
         if(e.propertyName !== 'transform') return;
             this.classList.remove("active");
