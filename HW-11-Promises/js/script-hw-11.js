@@ -4,7 +4,7 @@ async function getRandomChinese (length) {
 
     const makeChineseChar = () => String.fromCharCode(String(Date.now()).slice(-5));
 
-	let getRandomChar = () => new Promise((resolve) => setTimeout(() => {return resolve(makeChineseChar())},delay));
+	let getRandomChar = () => new Promise((resolve) => setTimeout(() => resolve(makeChineseChar()),delay));
 
 	while (length > 0) {
 		outputChar += await getRandomChar();		
