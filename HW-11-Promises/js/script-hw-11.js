@@ -3,7 +3,6 @@ async function getRandomChinese (length) {
     const delay = 50;
 
     const makeChineseChar = () => String.fromCharCode(String(Date.now()).slice(-5));
-
 	let getRandomChar = () => new Promise((resolve) => setTimeout(() => resolve(makeChineseChar()),delay));
 
 	while (length > 0) {
