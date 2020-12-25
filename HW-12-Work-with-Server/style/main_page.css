@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&display=swap');
+
+body {
+    font-family: 'Bebas Neue', 'Roboto', sans-serif;
+    background-image: url(../img/darthvader.jpg);
+    background-size: cover;
+}
+.title {
+    margin: 15px 55%;
+    font-size: 64px;
+    font-weight: 700;
+    color: rgb(225, 212, 41);
+}
+
+button,
+.film-search,
+.search {
+    font-family: 'Bebas Neue', cursive, 'Roboto', sans-serif;
+    font-size: large;
+    padding: 15px
+}
+
+.to-planets {
+    background-color: rgb(242, 215, 13);
+    margin-top: -30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.to-planets:hover,
+.film-search:hover {
+    color: rgb(52, 1, 55);
+    font-weight: 600;
+}
+
+.films-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+.list-wrapper {
+    height: auto;
+    width: 350px;
+    padding: 15px 25px;
+    color: rgb(4, 19, 19);
+    background-color: rgba(80, 139, 184, 0.645);
+    margin: 15px 55%
+}
+
+.films-list {
+    list-style: decimal;
+}
+
+.films-list li,
+.personage-list li {
+    margin-top: 10px;
+}
+
+.sub-title {
+    margin: 5px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.search-wrapper {
+    margin: 10px 13%;
+}
+
+.personage-list {
+    list-style: none;
+}
