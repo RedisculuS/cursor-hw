@@ -1,0 +1,46 @@
+//1
+function* createIdGenerator() {
+    for(let i = 1; i < Infinity; i++) {
+        yield i;
+    }
+}
+
+const idGenerator = createIdGenerator();
+console.log(idGenerator.next().value);
+console.log(idGenerator.next().value);
+console.log(idGenerator.next().value);
+
+//2
+const textUp = document.querySelector('.keyUp');
+const textDown = document.querySelector('.keyDown');
+const textToFormat = document.querySelector('p');
+
+function* newFontGenerator(textSize){
+	let size = textSize;
+	while (true) {
+		const char = yield size;
+		if(char === 'up'){
+			size++;
+		}
+		else if(char === 'down'){
+			size--;
+		}
+	}
+}
+
+const fontGenerator = newFontGenerator(14);
+
+textUp.addEventListener('click', function() {
+    textToFormat.style.fontSize = `${fontGenerator.next('up').value}px`;
+});
+textDown.addEventListener('click', function() {
+    textToFormat.style.fontSize = `${fontGenerator.next('down').value}px`;
+});
+
+// console.log(fontGenerator.next('up').value);
+// console.log(fontGenerator.next('up').value);
+// console.log(fontGenerator.next('up').value);
+// console.log(fontGenerator.next().value);
+// console.log(fontGenerator.next('down').value);
+// console.log(fontGenerator.next('down').value);
+// console.log(fontGenerator.next('down').value);
