@@ -15,6 +15,8 @@ const textUp = document.querySelector('.keyUp');
 const textDown = document.querySelector('.keyDown');
 const textToFormat = document.querySelector('p');
 
+const currentFont = parseInt(getComputedStyle(textToFormat).fontSize);
+
 function* newFontGenerator(textSize){
 	let size = textSize;
 	while (true) {
@@ -28,7 +30,7 @@ function* newFontGenerator(textSize){
 	}
 }
 
-const fontGenerator = newFontGenerator(14);
+const fontGenerator = newFontGenerator(currentFont);
 
 textUp.addEventListener('click', function() {
     textToFormat.style.fontSize = `${fontGenerator.next('up').value}px`;
