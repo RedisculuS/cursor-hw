@@ -23,7 +23,7 @@ const getPersonages = (number) => fetch(`https://swapi.dev/api/people`)
             person.films.includes(`http://swapi.dev/api/films/${number}/`));
         console.log(persons);
 
-        persons.map((person, name, gender, birth_year) =>
+        persons.map(({person, name, gender, birth_year}) =>
             personList.innerHTML = `<li>Name : ${person?.name} <br>
             date of birth :  ${person?.birth_year};   
             gender :  ${person?.gender} </li>` +
