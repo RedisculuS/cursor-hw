@@ -8,11 +8,6 @@ import {getMiddleTaxes} from "./hw-7";
 import {Student} from "./hw-8";
 import {generateBlocks} from "./hw-9";
 import "/style-hw-9.css";
-// import {makeSound} from "./hw-10";
-// import "./hw-10.css";
-
-
-
 
 
 // import "./style.css";
@@ -60,4 +55,3 @@ console.log(valia.getInfo());
 
 console.log(generateBlocks(25));
 
-// makeSound(e);
