@@ -1,7 +1,6 @@
 import React from 'react';
 import '../post/Post-style.css';
 
-
 const Post = (props) => {
 
     return(
