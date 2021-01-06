@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/cursor-hw/HW-15-React-Base/static/css/main.367caa87.chunk.css",
-    "main.js": "/cursor-hw/HW-15-React-Base/static/js/main.08795d4d.chunk.js",
-    "main.js.map": "/cursor-hw/HW-15-React-Base/static/js/main.08795d4d.chunk.js.map",
-    "runtime-main.js": "/cursor-hw/HW-15-React-Base/static/js/runtime-main.441349f2.js",
-    "runtime-main.js.map": "/cursor-hw/HW-15-React-Base/static/js/runtime-main.441349f2.js.map",
-    "static/js/2.38772ec4.chunk.js": "/cursor-hw/HW-15-React-Base/static/js/2.38772ec4.chunk.js",
-    "static/js/2.38772ec4.chunk.js.map": "/cursor-hw/HW-15-React-Base/static/js/2.38772ec4.chunk.js.map",
-    "static/js/3.3886b15e.chunk.js": "/cursor-hw/HW-15-React-Base/static/js/3.3886b15e.chunk.js",
-    "static/js/3.3886b15e.chunk.js.map": "/cursor-hw/HW-15-React-Base/static/js/3.3886b15e.chunk.js.map",
-    "index.html": "/cursor-hw/HW-15-React-Base/index.html",
-    "static/css/main.367caa87.chunk.css.map": "/cursor-hw/HW-15-React-Base/static/css/main.367caa87.chunk.css.map",
-    "static/js/2.38772ec4.chunk.js.LICENSE.txt": "/cursor-hw/HW-15-React-Base/static/js/2.38772ec4.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/cursor-hw/HW-15-React-Base/static/media/logo.6ce24c58.svg"
+    "main.css": "/cursor-hw/HW-15-React-Base/hw-15/static/css/main.367caa87.chunk.css",
+    "main.js": "/cursor-hw/HW-15-React-Base/hw-15/static/js/main.08795d4d.chunk.js",
+    "main.js.map": "/cursor-hw/HW-15-React-Base/hw-15/static/js/main.08795d4d.chunk.js.map",
+    "runtime-main.js": "/cursor-hw/HW-15-React-Base/hw-15/static/js/runtime-main.424dab73.js",
+    "runtime-main.js.map": "/cursor-hw/HW-15-React-Base/hw-15/static/js/runtime-main.424dab73.js.map",
+    "static/js/2.38772ec4.chunk.js": "/cursor-hw/HW-15-React-Base/hw-15/static/js/2.38772ec4.chunk.js",
+    "static/js/2.38772ec4.chunk.js.map": "/cursor-hw/HW-15-React-Base/hw-15/static/js/2.38772ec4.chunk.js.map",
+    "static/js/3.3886b15e.chunk.js": "/cursor-hw/HW-15-React-Base/hw-15/static/js/3.3886b15e.chunk.js",
+    "static/js/3.3886b15e.chunk.js.map": "/cursor-hw/HW-15-React-Base/hw-15/static/js/3.3886b15e.chunk.js.map",
+    "index.html": "/cursor-hw/HW-15-React-Base/hw-15/index.html",
+    "static/css/main.367caa87.chunk.css.map": "/cursor-hw/HW-15-React-Base/hw-15/static/css/main.367caa87.chunk.css.map",
+    "static/js/2.38772ec4.chunk.js.LICENSE.txt": "/cursor-hw/HW-15-React-Base/hw-15/static/js/2.38772ec4.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/cursor-hw/HW-15-React-Base/hw-15/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.441349f2.js",
+    "static/js/runtime-main.424dab73.js",
     "static/js/2.38772ec4.chunk.js",
     "static/css/main.367caa87.chunk.css",
     "static/js/main.08795d4d.chunk.js"
