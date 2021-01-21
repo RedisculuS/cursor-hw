@@ -4,10 +4,6 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } */
 
-div {
-    color: red;
-}
-
 .keys {
     display: flex;
     flex: 1;
