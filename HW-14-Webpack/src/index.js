@@ -8,12 +8,6 @@ import {getMiddleTaxes} from "./modules/hw-7";
 import {Student} from "./modules/hw-8";
 import {generateBlocks} from "./modules/hw-9";
 import "/style/style-hw-9.css";
-import {makeSound} from './modules/hw-10';
-import './style/style-hw-10.css';
-
-
-// import "./style.css";
-import screen from "./image.jpg";
 
 console.log(randomSale());
 console.log(sumWithOddNum(1,10,true));
@@ -56,5 +50,3 @@ const valia = new Student('КНТЕУ', 3, 'Самойлова Валентин�
 console.log(valia.getInfo());
 
 console.log(generateBlocks(25));
-
-console.log(makeSound());
